@@ -2,4 +2,35 @@
 <resources>
 
     <style name="Theme.Todokotlin" parent="android:Theme.Material.Light.NoActionBar" />
+
+    <style name="Theme.ThemeTODO" parent="android:Theme.Material.Light.NoActionBar">
+        <!-- Color theme for the app -->
+        <item name="android:colorPrimary">@color/purple_500</item>
+        <item name="android:colorPrimaryDark">@color/purple_700</item>
+        <item name="android:colorAccent">@color/teal_200</item>
+
+        <!-- Background color for the entire window -->
+        <item name="android:windowBackground">@color/white</item>
+
+        <!-- Color of the status bar (the area above the app bar) -->
+        <item name="android:statusBarColor">@color/todo_background_todo_app</item>
+
+        <!-- Highlight color used for indicating the focused or selected state of a control -->
+        <item name="android:colorControlHighlight">@color/purple_200</item>
+
+        <!-- Default color of controls, such as buttons and checkboxes -->
+        <item name="android:colorControlNormal">@color/black</item>
+
+        <!-- Primary text color for the app -->
+        <item name="android:textColorPrimary">@color/black</item>
+
+        <!-- Secondary text color for the app -->
+        <item name="android:textColorSecondary">@color/black</item>
+
+        <!-- Normal color of buttons -->
+        <item name="android:colorButtonNormal">@color/purple_500</item>
+
+        <!-- Color used for edge effects, such as scrolling and flinging -->
+        <item name="android:colorEdgeEffect">@color/purple_500</item>
+    </style>
 </resources>
