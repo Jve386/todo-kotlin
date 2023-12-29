@@ -33,4 +33,10 @@
         <!-- Color used for edge effects, such as scrolling and flinging -->
         <item name="android:colorEdgeEffect">@color/purple_500</item>
     </style>
+
+    <style name="TodoSubtitle">
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textColor">@color/todo_subtitle_text</item>
+        <item name="android:layout_marginHorizontal">32dp</item>
+    </style>
 </resources>
