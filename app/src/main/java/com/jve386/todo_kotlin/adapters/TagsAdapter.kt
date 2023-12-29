@@ -4,9 +4,9 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.jve386.todo_kotlin.R
-import com.jve386.todo_kotlin.models.Tasks
+import com.jve386.todo_kotlin.models.Tags
 
-class TagsAdapter(private val categories: List<Tasks>) :
+class TagsAdapter(private val categories: List<Tags>) :
     RecyclerView.Adapter<TagsViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): TagsViewHolder {
         val view =
