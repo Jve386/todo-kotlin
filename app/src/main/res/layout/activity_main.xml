@@ -48,4 +48,14 @@
         android:layout_marginHorizontal="32dp"
         android:layout_marginTop="16dp"/>
 
+<!-- DA ERROR 
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabAddTask"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="32dp"/>
+-->
+
+
 </LinearLayout>
