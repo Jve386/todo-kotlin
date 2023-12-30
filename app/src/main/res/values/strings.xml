@@ -4,4 +4,5 @@
     <string name="todo_title_text">Todo App</string>
     <string name="todo_category">Choose tag:</string>
     <string name="todo_tasks">Tasks</string>
+    <string name="todo_dialog_add_task_hint">Añade la tarea</string>
 </resources>

@@ -1,9 +1,11 @@
 package com.jve386.todo_kotlin
 
+import android.app.Dialog
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.jve386.todo_kotlin.adapters.TagsAdapter
 import com.jve386.todo_kotlin.adapters.TasksAdapter
 import com.jve386.todo_kotlin.models.Tags
@@ -39,11 +41,29 @@ class MainActivity : ComponentActivity() {
 
     private lateinit var rvTasks: RecyclerView
     private lateinit var tasksAdapter: TasksAdapter
+
+    private lateinit var fabAddTask: FloatingActionButton
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         initcomponents()
         initUI()
+        initListeners()
+    }
+
+    private fun initListeners() {
+        fabAddTask.setOnClickListener { showDialog() }
+    }
+
+    private fun showDialog() {
+        val dialog = Dialog(this)
+    }
+
+    private fun initcomponents() {
+        rvTags = findViewById(R.id.rvTags)
+        rvTasks = findViewById(R.id.rvTasks)
+        fabAddTask = findViewById(R.id.fabAddTask)
     }
 
     private fun initUI() {
@@ -54,10 +74,5 @@ class MainActivity : ComponentActivity() {
         tasksAdapter = TasksAdapter(tasks)
         rvTasks.layoutManager = LinearLayoutManager(this)
         rvTasks.adapter = tasksAdapter
-    }
-
-    private fun initcomponents() {
-        rvTags = findViewById(R.id.rvTags)
-        rvTasks = findViewById(R.id.rvTasks)
     }
 }
