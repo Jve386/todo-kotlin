@@ -16,7 +16,7 @@
         android:textColorHint="@color/white" />
 
     <RadioGroup
-        android:id="@+id/rgCategories"
+        android:id="@+id/rgTags"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
@@ -24,7 +24,7 @@
             android:id="@+id/rbBusiness"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:buttonTint="@color/todo_business_category"
+            android:buttonTint="@color/todo_business_tag"
             android:checked="true"
             android:text="@string/work"
             android:textColor="@color/white" />
@@ -33,7 +33,7 @@
             android:id="@+id/rbPersonal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:buttonTint="@color/todo_personal_category"
+            android:buttonTint="@color/todo_personal_tag"
             android:text="@string/personal"
             android:textColor="@color/white" />
 
@@ -41,7 +41,7 @@
             android:id="@+id/rbOther"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:buttonTint="@color/todo_other_category"
+            android:buttonTint="@color/todo_other_tag"
             android:text="@string/shopping"
             android:textColor="@color/white" />
 

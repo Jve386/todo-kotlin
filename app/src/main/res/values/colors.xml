@@ -15,7 +15,7 @@
     <color name="todo_subtitle_text">#959595</color>
     <color name="todo_accent">#E91E63</color>
 
-    <color name="todo_business_category">#FF9800</color>
-    <color name="todo_personal_category">#00BCD4</color>
-    <color name="todo_other_category">#4CAF50</color>
+    <color name="todo_business_tag">#FF9800</color>
+    <color name="todo_personal_tag">#00BCD4</color>
+    <color name="todo_other_tag">#4CAF50</color>
 </resources>

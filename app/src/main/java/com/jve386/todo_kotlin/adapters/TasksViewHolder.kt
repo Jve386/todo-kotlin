@@ -8,9 +8,8 @@ import android.widget.TextView
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
 import com.jve386.todo_kotlin.R
-import com.jve386.todo_kotlin.models.Tags
-import com.jve386.todo_kotlin.models.Task
-import androidx.appcompat.widget.AppCompatCheckBox
+import com.jve386.todo_kotlin.model.Tags
+import com.jve386.todo_kotlin.model.Task
 
 
 class TasksViewHolder(view: View) : RecyclerView.ViewHolder(view) {
@@ -41,11 +40,11 @@ class TasksViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         // Apply strike-through effect based on the checkbox state
         handleCheckboxChange(task.isSelected)
 
-        // Set the checkbox color based on the category
-        val color = when (task.category) {
-            Tags.Work -> R.color.todo_business_category
-            Tags.Shopping -> R.color.todo_other_category
-            Tags.Personal -> R.color.todo_personal_category
+        // Set the checkbox color based on the tag
+        val color = when (task.tag) {
+            Tags.Work -> R.color.todo_business_tag
+            Tags.Shopping -> R.color.todo_other_tag
+            Tags.Personal -> R.color.todo_personal_tag
         }
 
         // Set the checkbox color
