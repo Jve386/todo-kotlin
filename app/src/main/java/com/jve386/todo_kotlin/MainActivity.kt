@@ -1,7 +1,12 @@
 package com.jve386.todo_kotlin
 
+import android.annotation.SuppressLint
 import android.app.Dialog
 import android.os.Bundle
+import android.widget.Button
+import android.widget.EditText
+import android.widget.RadioButton
+import android.widget.RadioGroup
 import androidx.activity.ComponentActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -56,8 +61,32 @@ class MainActivity : ComponentActivity() {
         fabAddTask.setOnClickListener { showDialog() }
     }
 
+    @SuppressLint("CutPasteId")
     private fun showDialog() {
         val dialog = Dialog(this)
+        dialog.setContentView(R.layout.dialog_task)
+        val btnAddTask: Button = dialog.findViewById(R.id.btnAddTask)
+        val etTask: EditText = dialog.findViewById(R.id.etTaskName)
+        val rgCategories: RadioGroup = dialog.findViewById(R.id.rgCategories)
+
+        btnAddTask.setOnClickListener {
+            val currentTask = etTask.text.toString()
+            if (currentTask.isNotEmpty()) {
+                val selectedId = rgCategories.checkedRadioButtonId
+                val selectedRadioButton: RadioButton = rgCategories.findViewById(selectedId)
+                val currentCategory: Tags = when (selectedRadioButton.text) {
+                    getString(R.string.personal) -> Personal
+                    getString(R.string.work) -> Work
+                    else -> Shopping
+                }
+
+                tasks.add(Task(currentTask, currentCategory))
+                updateTasks()
+                dialog.hide()
+            }
+        }
+
+        dialog.show()
     }
 
     private fun initcomponents() {
@@ -71,8 +100,17 @@ class MainActivity : ComponentActivity() {
         rvTags.layoutManager = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
         rvTags.adapter = tagsAdapter
 
-        tasksAdapter = TasksAdapter(tasks)
+        tasksAdapter = TasksAdapter(tasks) {onItemSelected(it)}
         rvTasks.layoutManager = LinearLayoutManager(this)
         rvTasks.adapter = tasksAdapter
+    }
+
+    private fun onItemSelected(position:Int){
+        tasks[position].isSelected = !tasks[position].isSelected
+        updateTasks()
+    }
+    @SuppressLint("NotifyDataSetChanged")
+    private fun updateTasks() {
+        tasksAdapter.notifyDataSetChanged()
     }
 }
