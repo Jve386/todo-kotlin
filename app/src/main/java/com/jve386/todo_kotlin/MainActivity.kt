@@ -28,9 +28,9 @@ class MainActivity : ComponentActivity() {
 
     // List of tasks
     private val tasks = mutableListOf(
-        Task("PruebaBusiness", Work),
-        Task("PruebaPersonal", Personal),
-        Task("PruebaShopping", Shopping)
+        Task("Meeting 9pm", Work),
+        Task("Birthday", Personal),
+        Task("Icecream", Shopping)
     )
 
     // UI components

@@ -5,8 +5,8 @@
     <string name="todo_category">Choose tag:</string>
     <string name="todo_tasks">Tasks</string>
     <string name="todo_dialog_add_task_hint">Añade la tarea</string>
-    <string name="work">Trabajo</string>
+    <string name="work">Work</string>
     <string name="personal">Personal</string>
-    <string name="shopping">Otros</string>
-    <string name="add_task">Añadir tarea</string>
+    <string name="shopping">Shopping</string>
+    <string name="add_task">Add task</string>
 </resources>
